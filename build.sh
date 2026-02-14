@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Import KernelSU-Next
-curl -LSs "https://raw.githubusercontent.com/pershoot/KernelSU-Next/dev-susfs/kernel/setup.sh" | bash -s dev-susfs
+curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/dev_susfs/kernel/setup.sh" | bash -s dev_susfs
 
 # Import SuSFS
 patch -p1 < prebuilts/susfs_a12_5.10.patch

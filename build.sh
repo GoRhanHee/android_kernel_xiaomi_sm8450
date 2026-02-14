@@ -4,7 +4,7 @@
 curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/dev/kernel/setup.sh" | bash -
 
 # Define toolchain variables
-CLANG_DIR=$PWD/toolchain/clang-r574158
+CLANG_DIR=$PWD/toolchain/clang-r536225
 PATH=$CLANG_DIR/bin:$PATH
 
 # Check if toolchain exists
@@ -23,6 +23,8 @@ PATH=$CLANG_DIR/bin:$PATH
 # Setting 
 export ANDROID_BUILD_TOP=$(pwd)
 export ARCH=arm64
+export SUBARCH=arm64
+export LINKER="ld.lld"
 
 # Cooking Kernel Source
 mkdir out

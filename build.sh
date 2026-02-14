@@ -8,19 +8,17 @@ CLANG_DIR=$PWD/toolchain/clang-r574158
 PATH=$CLANG_DIR/bin:$PATH
 
 # Check if toolchain exists
-if [ ! -f "$CLANG_DIR/bin/clang-21" ]; then
     echo "-----------------------------------------------"
     echo "Toolchain not found! Downloading..."
     echo "-----------------------------------------------"
     rm -rf $CLANG_DIR
     mkdir -p $CLANG_DIR
     pushd $CLANG_DIR > /dev/null
-    curl -LJOk https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz
-    tar xf linux-x86-refs_heads_main-clang-r536225.tar.gz
-    rm linux-x86-refs_heads_main-clang-r536225.tar.gz
+    curl -LJOk -o clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz
+    tar xf clang.tar.gz
+    rm clang.tar.gz
     echo "Cleaning up..."
     popd > /dev/null
-fi
 
 # Setting 
 export ANDROID_BUILD_TOP=$(pwd)

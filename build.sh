@@ -16,8 +16,8 @@ if [ ! -f "$CLANG_DIR/bin/clang-21" ]; then
     mkdir -p $CLANG_DIR
     pushd $CLANG_DIR > /dev/null
     curl -LJOk https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz
-    tar xf mirror-goog-main-llvm-toolchain-source-clang-r574158.tar.gz
-    rm mirror-goog-main-llvm-toolchain-source-clang-r574158.tar.gz
+    tar xf linux-x86-refs_heads_main-clang-r536225.tar.gz
+    rm linux-x86-refs_heads_main-clang-r536225.tar.gz
     echo "Cleaning up..."
     popd > /dev/null
 fi

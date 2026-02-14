@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Import KernelSU-Next
-curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/dev/kernel/setup.sh" | bash -
+curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/dev/kernel/setup.sh" | bash -s dev-susfs
+
+# Import SuSFS
+patch -p1 < prebuilts/susfs_a12_5.10.patch
 
 # Define toolchain variables
 CLANG_DIR=$PWD/toolchain/clang-r536225

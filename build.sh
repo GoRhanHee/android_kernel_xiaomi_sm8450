@@ -44,7 +44,7 @@ mkdir prebuilts/output
 chmod +x ${ANDROID_BUILD_TOP}/prebuilts/*
 cd ${ANDROID_BUILD_TOP}/prebuilts
 
-unzip -jo ${ANDROID_BUILD_TOP}/prebuilts/${DEVICE}/boot.zip boot.img -d ${ANDROID_BUILD_TOP}/prebuilts/
+unzip -jo ${ANDROID_BUILD_TOP}/prebuilts/boot.zip boot.img -d ${ANDROID_BUILD_TOP}/prebuilts/
 ./magiskboot unpack boot.img
 cp ${ANDROID_BUILD_TOP}/out/arch/arm64/boot/Image ${ANDROID_BUILD_TOP}/prebuilts/kernel
 ./magiskboot repack boot.img

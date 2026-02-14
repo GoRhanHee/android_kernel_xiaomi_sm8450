@@ -14,7 +14,7 @@ PATH=$CLANG_DIR/bin:$PATH
     rm -rf $CLANG_DIR
     mkdir -p $CLANG_DIR
     pushd $CLANG_DIR > /dev/null
-    curl -LJOk -o clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz
+    curl -LJk -o clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz
     tar xf clang.tar.gz
     rm clang.tar.gz
     echo "Cleaning up..."

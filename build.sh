@@ -14,9 +14,9 @@ PATH=$CLANG_DIR/bin:$PATH
     rm -rf $CLANG_DIR
     mkdir -p $CLANG_DIR
     pushd $CLANG_DIR > /dev/null
-    curl -LJk -o clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz
-    tar xf clang.tar.gz
-    rm clang.tar.gz
+    wget -q --show-progress https://github.com/GoRhanHee/android_kernel_xiaomi_sm8450/releases/download/toolchain/clang-r536225.tar.gz
+    tar xf clang-r536225.tar.gz
+    rm clang-r536225.tar.gz
     echo "Cleaning up..."
     popd > /dev/null
 

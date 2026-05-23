@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Import KernelSU-Next
-curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -
+curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/dev/kernel/setup.sh" | bash -s dev
 
 # Define toolchain variables
 CLANG_DIR=$PWD/toolchain/clang-r536225
